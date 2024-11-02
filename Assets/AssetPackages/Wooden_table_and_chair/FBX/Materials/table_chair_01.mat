@@ -64,11 +64,11 @@ Material:
     - _AlphaCutoff: 0.5
     - _EnvironmentReflections: 1
     - _Metallic: 0
-    - _PosterizePower: 9.23
+    - _PosterizePower: 15.89
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 0.515
+    - _Smoothness: 0.526
     - _SpecularHighlights: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 0}
