@@ -1,4 +1,5 @@
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource), typeof(Animator))]
@@ -11,6 +12,8 @@ public class GunController : MonoBehaviour
     public AudioClip jammedSound;                  // Sound that plays when the gun jams
     public AudioClip reloadSound;                  // Sound that plays when reloading
     public ParticleSystem muzzleFlash;
+    public Light muzzleFlashLight;
+    public float muzzleFlashDuration = .25f;
 
     [Header("Bullet Settings")]
     public Transform bulletOrigin;
@@ -56,6 +59,8 @@ public class GunController : MonoBehaviour
             muzzleFlash.Stop();
             muzzleFlash.Play();
         }
+
+        MuzzleFlash();
 
         Vector3 origin = bulletOrigin != null ? bulletOrigin.position : transform.position;
         Vector3 direction = bulletOrigin != null ? bulletOrigin.forward : transform.forward;
@@ -115,6 +120,17 @@ public class GunController : MonoBehaviour
         }
     }
 
+    private void MuzzleFlash()
+    {
+        // Ensure the light starts at intensity 0
+        muzzleFlashLight.intensity = 0f;
+
+        // Animate the light's intensity from 0 to 1 and back to 0 once
+        muzzleFlashLight.DOIntensity(7.15f, muzzleFlashDuration / 2) // Animate to intensity 1
+            .OnComplete(() => muzzleFlashLight.DOIntensity(0f, muzzleFlashDuration / 2)) // Then animate back to 0
+            .SetEase(Ease.OutSine); // Smooth easing for the pulse effect
+    }
+    
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
