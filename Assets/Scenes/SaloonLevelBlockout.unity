@@ -5011,6 +5011,148 @@ MonoBehaviour:
   hotspotPriority: 0.5
   autoHotspotLayout: 0
   hotspotGroup: 0
+--- !u!1 &507644123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 507644126}
+  - component: {fileID: 507644125}
+  - component: {fileID: 507644124}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &507644124
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507644123}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5dc0fd26d09c76f4bb8235e4ab6fbd4e, type: 3}
+  m_Resource: {fileID: 8300000, guid: 5dc0fd26d09c76f4bb8235e4ab6fbd4e, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &507644125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507644123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc84d63ab45325f41bf8b9a5c191c4f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &507644126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507644123}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.2773685, y: 0.4742415, z: -0.021448225}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &622885305
 GameObject:
   m_ObjectHideFlags: 0
@@ -8076,7 +8218,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &941208116
 Transform:
   m_ObjectHideFlags: 0
@@ -30588,7 +30730,7 @@ MonoBehaviour:
         distance_: 1.0028133
       matID_: 0
       flags_: 4
-      instanceID_: 1837655
+      instanceID_: 1844481
       groupID: 0
     - vertices_:
       - pos: {x: -0.08238515, y: 0.109913856, z: 0.751291}
@@ -30621,7 +30763,7 @@ MonoBehaviour:
         distance_: -0.109913856
       matID_: 0
       flags_: 4
-      instanceID_: 1837657
+      instanceID_: 1844483
       groupID: 0
     - vertices_:
       - pos: {x: -1.0851979, y: -0.12548336, z: 0.3780617}
@@ -30654,7 +30796,7 @@ MonoBehaviour:
         distance_: 0.3780617
       matID_: 0
       flags_: 4
-      instanceID_: 1837659
+      instanceID_: 1844485
       groupID: 0
     - vertices_:
       - pos: {x: -0.0000005364418, y: -0.12548336, z: 0.3780617}
@@ -30687,7 +30829,7 @@ MonoBehaviour:
         distance_: 0.3780617
       matID_: 0
       flags_: 4
-      instanceID_: 1837660
+      instanceID_: 1844486
       groupID: 0
     - vertices_:
       - pos: {x: -1.0028126, y: 1.9238806, z: 0.3780617}
@@ -30720,7 +30862,7 @@ MonoBehaviour:
         distance_: 1.9238806
       matID_: 0
       flags_: 4
-      instanceID_: 1837661
+      instanceID_: 1844487
       groupID: 0
     - vertices_:
       - pos: {x: -1.0851979, y: 2.0132115, z: 0.3780617}
@@ -30753,7 +30895,7 @@ MonoBehaviour:
         distance_: 0.3780617
       matID_: 0
       flags_: 4
-      instanceID_: 1837663
+      instanceID_: 1844489
       groupID: 0
     - vertices_:
       - pos: {x: -0.08238515, y: 1.9238806, z: 0.751291}
@@ -30786,7 +30928,7 @@ MonoBehaviour:
         distance_: -0.08238659
       matID_: 0
       flags_: 4
-      instanceID_: 1837664
+      instanceID_: 1844490
       groupID: 0
     - vertices_:
       - pos: {x: -0.0000005364418, y: 2.0132115, z: 0.3780617}
@@ -30819,7 +30961,7 @@ MonoBehaviour:
         distance_: 0.3780617
       matID_: 0
       flags_: 4
-      instanceID_: 1837666
+      instanceID_: 1844492
       groupID: 0
     - vertices_:
       - pos: {x: -1.0851979, y: -0.12548336, z: 0.3780617}
@@ -30852,7 +30994,7 @@ MonoBehaviour:
         distance_: -1.0851982
       matID_: 0
       flags_: 4
-      instanceID_: 1837667
+      instanceID_: 1844493
       groupID: 0
     - vertices_:
       - pos: {x: -0.0000005364418, y: -0.12548336, z: 0.3780617}
@@ -30885,7 +31027,7 @@ MonoBehaviour:
         distance_: -0.12548336
       matID_: 0
       flags_: 4
-      instanceID_: 1837669
+      instanceID_: 1844495
       groupID: 0
     - vertices_:
       - pos: {x: -1.0851977, y: 2.0132115, z: 0.8188532}
@@ -30918,7 +31060,7 @@ MonoBehaviour:
         distance_: -2.0132115
       matID_: 0
       flags_: 4
-      instanceID_: 1837671
+      instanceID_: 1844497
       groupID: 0
     - vertices_:
       - pos: {x: -0.0000002951202, y: 2.0132115, z: 0.8188532}
@@ -30951,7 +31093,7 @@ MonoBehaviour:
         distance_: 0.0000007434205
       matID_: 0
       flags_: 4
-      instanceID_: 1837673
+      instanceID_: 1844499
       groupID: 0
     mainPolygonsStream: 
     subPolygons_: []
@@ -31144,3 +31286,4 @@ SceneRoots:
   - {fileID: 905265947}
   - {fileID: 741118518}
   - {fileID: 6081268618338853835}
+  - {fileID: 507644126}
