@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,6 +9,10 @@ public class PointLightTimer : MonoBehaviour
     [Header("Dependencies")]
     [SerializeField] private Light pointLight;
     [SerializeField] private SphereCollider sphereCollider;
+    
+    [Header("Optional Blendshape")]
+    [SerializeField] private List<SkinnedMeshRenderer> skinnedMeshRenderers; // The renderer with the blendshape
+    [SerializeField] private int blendShapeIndex = 0; // Index of the blendshape to modify
     
     [Header("Configuration")]
     [SerializeField] private float decayDuration = 5f; // Time in seconds for the decay to complete
@@ -24,6 +29,12 @@ public class PointLightTimer : MonoBehaviour
         pointLight.range = initialRange;
         pointLight.intensity = initialIntensity;
         sphereCollider.radius = initialRange;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Respawn"))
+            Replenish();
     }
 
     private void Update()
@@ -43,13 +54,21 @@ public class PointLightTimer : MonoBehaviour
             pointLight.range = initialRange * decayProgress;
             pointLight.intensity = initialIntensity * decayProgress;
             sphereCollider.radius = initialRange * decayProgress;
+            
+            // Update blendshape weight from 0 to 100 based on decay progress
+            if (skinnedMeshRenderers.Count > 0)
+            {
+                float blendShapeWeight = Mathf.Lerp(0, 100, 1f - decayProgress); // 1 - decayProgress to go from 0 to 100
+                foreach (var skinnedMeshRenderer in skinnedMeshRenderers)
+                    skinnedMeshRenderer.SetBlendShapeWeight(blendShapeIndex, blendShapeWeight);
+            }
         }
         else
         {
             // Once decay is complete, ensure values are set to 0
             pointLight.range = 0;
             pointLight.intensity = 0;
-            sphereCollider.radius = 0;
+            sphereCollider.radius = 0.1f;
             
             decayComplete = true;
             OnDecayComplete?.Invoke();
@@ -57,5 +76,24 @@ public class PointLightTimer : MonoBehaviour
             // Optionally, destroy the GameObject if you want it to disappear
             // Destroy(gameObject);
         }
+    }
+    
+    private void Replenish()
+    {
+        decayTimer = 0f;
+
+        // Reset light and collider properties to their initial values
+        pointLight.range = initialRange;
+        pointLight.intensity = initialIntensity;
+        sphereCollider.radius = initialRange;
+
+        // Reset blendshape to 0
+        if (skinnedMeshRenderers.Count > 0)
+        {
+            foreach (var skinnedMeshRenderer in skinnedMeshRenderers)
+                skinnedMeshRenderer.SetBlendShapeWeight(blendShapeIndex, 0);
+        }
+        
+        decayComplete = false;
     }
 }
