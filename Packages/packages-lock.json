@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.innovam.studioxrtoolkit": {
+      "version": "https://github.com/Studio-XR/StudioXR-TK.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
+      },
+      "hash": "546b681bb1f6d3c672b1609d685c40b05b53a302"
+    },
     "com.unity.burst": {
       "version": "1.8.12",
       "depth": 1,
@@ -87,6 +96,13 @@
     },
     "com.unity.nuget.mono-cecil": {
       "version": "1.11.4",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.2.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
