@@ -286,6 +286,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.6039216
       objectReference: {fileID: 0}
+    - target: {fileID: 4630544797485822626, guid: 344f33fb2c2635641acbbb3aea04dad4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4969411632516753296, guid: 344f33fb2c2635641acbbb3aea04dad4, type: 3}
       propertyPath: m_Name
       value: Dialogue
@@ -332,8 +336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7141037756338119631, guid: 344f33fb2c2635641acbbb3aea04dad4, type: 3}
       propertyPath: m_text
-      value: "I\u2019m round and shiny, with a value to find,\nIn the Wild West,
-        I'm often entwined."
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7141037756338119631, guid: 344f33fb2c2635641acbbb3aea04dad4, type: 3}
       propertyPath: m_fontSize
@@ -357,7 +360,91 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4969411632516753296, guid: 344f33fb2c2635641acbbb3aea04dad4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6420454351153252973}
+    - targetCorrespondingSourceObject: {fileID: 1845494805900466493, guid: 344f33fb2c2635641acbbb3aea04dad4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2365058302066262542}
+    - targetCorrespondingSourceObject: {fileID: 1845494805900466493, guid: 344f33fb2c2635641acbbb3aea04dad4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8993252549646635981}
   m_SourcePrefab: {fileID: 100100000, guid: 344f33fb2c2635641acbbb3aea04dad4, type: 3}
+--- !u!1 &1691695145375455440 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1845494805900466493, guid: 344f33fb2c2635641acbbb3aea04dad4, type: 3}
+  m_PrefabInstance: {fileID: 1073713211277951469}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2365058302066262542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691695145375455440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ace8ced0e81c847968cdca0aeda757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typewriterStartsAutomatically: 1
+  animationLoop: 0
+  timeScale: 0
+  _text: 
+  useDynamicScaling: 1
+  referenceFontSize: 10
+  isResettingTimeOnNewText: 1
+  useDefaultDatabases: 1
+  databaseBehaviors: {fileID: 11400000, guid: c492dbf426441e84eaaf661e52f7e146, type: 2}
+  databaseAppearances: {fileID: 11400000, guid: 2608b56cedc9d5c4a97978b8151f3b99, type: 2}
+  useDefaultStyleSheet: 1
+  styleSheet: {fileID: 0}
+  databaseActions: {fileID: 11400000, guid: 37c07b26abf9c344682285a65f1f3558, type: 2}
+  defaultAppearancesTags: []
+  defaultDisappearancesTags:
+  - fade
+  defaultBehaviorsTags: []
+  defaultTagsMode: 0
+--- !u!114 &8993252549646635981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691695145375455440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a6945b90dcd0c4b81619c0d8b5c283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useTypeWriter: 1
+  startTypewriterMode: 3
+  hideAppearancesOnSkip: 0
+  hideDisappearancesOnSkip: 0
+  triggerEventsOnSkip: 0
+  resetTypingSpeedAtStartup: 1
+  disappearanceOrientation: 0
+  onTextShowed:
+    m_PersistentCalls:
+      m_Calls: []
+  onTypewriterStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onTextDisappeared:
+    m_PersistentCalls:
+      m_Calls: []
+  onCharacterVisible:
+    m_PersistentCalls:
+      m_Calls: []
+  onMessage:
+    m_PersistentCalls:
+      m_Calls: []
+  waitForNormalChars: 0.03
+  waitLong: 0.6
+  waitMiddle: 0.2
+  avoidMultiplePunctuationWait: 0
+  waitForNewLines: 1
+  waitForLastCharacter: 1
+  useTypewriterWaitForDisappearances: 1
+  disappearanceWaitTime: 0.015
+  disappearanceSpeedMultiplier: 1
 --- !u!224 &2465548705929306147 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3229638412022243790, guid: 344f33fb2c2635641acbbb3aea04dad4, type: 3}
@@ -481,7 +568,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7141037756338119631, guid: 344f33fb2c2635641acbbb3aea04dad4, type: 3}
   m_PrefabInstance: {fileID: 1073713211277951469}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1691695145375455440}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}

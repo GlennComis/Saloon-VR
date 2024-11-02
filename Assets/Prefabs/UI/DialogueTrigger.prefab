@@ -75,6 +75,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8016fc1a48c5dc447bfa6b292a5bb52b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasTriggered: 0
   dialogueEndTrigger: 0
   conversationScriptableObject: {fileID: 11400000, guid: 121e20e40b9f4a94094f68398c694e5e, type: 2}
