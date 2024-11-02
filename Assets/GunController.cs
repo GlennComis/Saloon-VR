@@ -39,7 +39,7 @@ public class GunController : MonoBehaviour
             if (audioSource != null && jammedSound != null)
                 audioSource.PlayOneShot(jammedSound);
             
-            Debug.LogWarning("Gun jammed!");
+            Debug.Log("Gun jammed!");
             StartCoroutine(RestoreFireAfterDelay(false));  // Don't reload if jammed
             return;
         }
