@@ -32,10 +32,10 @@ public class CustomNetworkedRigidbody : NetworkBehaviour
             if (Time.time - lastSyncTime >= syncInterval)
             {
                 if (/*Vector3.Distance(networkPosition.Value, rb.position) > 0.01f ||*/ 
-                    Vector3.Distance(networkVelocity.Value, rb.velocity) > 0.01f)
+                    Vector3.Distance(networkVelocity.Value, rb.linearVelocity) > 0.01f)
                 {
                     //networkPosition.Value = rb.position;
-                    UpdateServerVelocityServerRpc(rb.velocity);
+                    UpdateServerVelocityServerRpc(rb.linearVelocity);
                     lastSyncTime = Time.time;
                 }
             }
@@ -43,7 +43,7 @@ public class CustomNetworkedRigidbody : NetworkBehaviour
         else
         {
             //rb.position = Vector3.Lerp(rb.position, networkPosition.Value, syncInterval);
-            rb.velocity = Vector3.Lerp(rb.velocity, networkVelocity.Value, syncInterval / 2);
+            rb.linearVelocity = Vector3.Lerp(rb.linearVelocity, networkVelocity.Value, syncInterval / 2);
         }
     }
     
@@ -66,7 +66,7 @@ public class CustomNetworkedRigidbody : NetworkBehaviour
         if (!IsOwner)
         {
             if(!rb.isKinematic)
-                rb.velocity = newVel;
+                rb.linearVelocity = newVel;
         }
     }
 }
