@@ -104,4 +104,10 @@ public class PlayerController : NetworkBehaviour
     }
 
     #endregion
+
+    [ClientRpc]
+    public void DieClientRPC()
+    {
+        Debug.Log("Play has been hit");
+    }
 }
