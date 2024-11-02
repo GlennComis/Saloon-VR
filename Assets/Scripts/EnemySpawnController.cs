@@ -27,7 +27,8 @@ public class EnemySpawnController : MonoBehaviour
         }
 
         spawnTimer += Time.deltaTime;
-        if (spawnTimer >= spawnRate - insanityController.CurrentInsanity)
+        
+        if (spawnTimer >= Mathf.Max(5, spawnRate - insanityController.CurrentInsanity))
         {
             SpawnEnemy();
             spawnTimer = 0f;

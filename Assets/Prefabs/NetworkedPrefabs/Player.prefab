@@ -5910,22 +5910,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Left Hand Model
       objectReference: {fileID: 0}
-    - target: {fileID: 5361119190209947427, guid: 625e54e3f06e00c47aed95fe2f295e24, type: 3}
-      propertyPath: GlobalObjectIdHash
-      value: 572554580
-      objectReference: {fileID: 0}
-    - target: {fileID: 5361119190209947427, guid: 625e54e3f06e00c47aed95fe2f295e24, type: 3}
-      propertyPath: InScenePlacedSourceGlobalObjectIdHash
-      value: 1863779091
-      objectReference: {fileID: 0}
-    - target: {fileID: 5639169726538338387, guid: 625e54e3f06e00c47aed95fe2f295e24, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: f29e6a11aaa4e124c85ef62da89278f8, type: 2}
-    m_RemovedComponents:
-    - {fileID: 7000644830163578015, guid: 625e54e3f06e00c47aed95fe2f295e24, type: 3}
-    - {fileID: 4414028243088105826, guid: 625e54e3f06e00c47aed95fe2f295e24, type: 3}
-    - {fileID: 5361119190209947427, guid: 625e54e3f06e00c47aed95fe2f295e24, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6299,13 +6284,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Right Hand Model
       objectReference: {fileID: 0}
-    - target: {fileID: 7869186587506919562, guid: 795c6570d6e181245a5f8bd1575e9bf4, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: f29e6a11aaa4e124c85ef62da89278f8, type: 2}
-    m_RemovedComponents:
-    - {fileID: 8981782930249556175, guid: 795c6570d6e181245a5f8bd1575e9bf4, type: 3}
-    - {fileID: 9157705748909416472, guid: 795c6570d6e181245a5f8bd1575e9bf4, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

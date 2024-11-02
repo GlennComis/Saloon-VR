@@ -1,7 +1,8 @@
 
+using StudioXRToolkit.Runtime.Scripts.Abstracts;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : SingletonMonoBehaviour<PlayerController>
 {
-    
+    public Transform headTransform;
 }

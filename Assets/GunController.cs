@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource), typeof(Animator))]
@@ -15,7 +16,8 @@ public class GunController : MonoBehaviour
     public Transform bulletOrigin;
     private AudioSource audioSource;
     private Animator animator;
-    private WaitForSeconds timeBetweenShotAndReload = new WaitForSeconds(.5f);
+    private readonly WaitForSeconds timeBetweenShotAndReload = new (.5f);
+    private readonly WaitForSeconds reloadTime = new (.7f);
     private float jamChance = 0.2f;                // 20% chance of jamming
     private bool canFire = true;                   // Tracks whether gun can fire
     private int shotsRemaining = 2;                // Allow two shots before reloading
@@ -63,11 +65,14 @@ public class GunController : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, range))
         {
-            PlayerController player = hit.collider.GetComponent<PlayerController>();
-            if (player != null)
-                Debug.LogWarning("We have hit a player, now he needs to die");
+            Enemy enemy = hit.collider.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                Debug.LogWarning("We have hit a enemy, now he needs to die");
+                enemy.Die();
+            }
             else
-                Debug.Log("We have missed the player");
+                Debug.Log("We have missed the enemy");
         }
 
         shotsRemaining--;
@@ -94,16 +99,20 @@ public class GunController : MonoBehaviour
         }
     }
 
-    private System.Collections.IEnumerator RestoreFireAfterDelay(bool shouldReload)
+    private IEnumerator RestoreFireAfterDelay(bool shouldReload)
     {
         if (shouldReload)
         {
             yield return timeBetweenShotAndReload;  
             Reload();
+            yield return reloadTime; 
+            canFire = true;
         }
-        
-        yield return new WaitForSeconds(shotDelay);
-        canFire = true;
+        else
+        {
+            yield return new WaitForSeconds(shotDelay);
+            canFire = true;   
+        }
     }
 
     private void OnDrawGizmosSelected()
