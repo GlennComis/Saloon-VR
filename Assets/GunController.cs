@@ -85,7 +85,6 @@ public class GunController : MonoBehaviour
             if (player != null)
             {
                 Debug.LogWarning("We have hit a player, now he needs to die");
-                player.DieClientRPC();
             }
             else
             {
