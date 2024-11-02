@@ -1701,7 +1701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 572554580
+  GlobalObjectIdHash: 2934343472
   InScenePlacedSourceGlobalObjectIdHash: 1863779091
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -6116,12 +6116,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5361119190209947427, guid: 625e54e3f06e00c47aed95fe2f295e24, type: 3}
       propertyPath: GlobalObjectIdHash
-      value: 572554580
+      value: 1635955999
       objectReference: {fileID: 0}
     - target: {fileID: 5361119190209947427, guid: 625e54e3f06e00c47aed95fe2f295e24, type: 3}
       propertyPath: InScenePlacedSourceGlobalObjectIdHash
       value: 1863779091
       objectReference: {fileID: 0}
+    - target: {fileID: 5639169726538338387, guid: 625e54e3f06e00c47aed95fe2f295e24, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f29e6a11aaa4e124c85ef62da89278f8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6354,7 +6358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4427dca67c4595f4ca34a99d914f9d6e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6496,6 +6500,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Right Hand Model
       objectReference: {fileID: 0}
+    - target: {fileID: 7869186587506919562, guid: 795c6570d6e181245a5f8bd1575e9bf4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f29e6a11aaa4e124c85ef62da89278f8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
