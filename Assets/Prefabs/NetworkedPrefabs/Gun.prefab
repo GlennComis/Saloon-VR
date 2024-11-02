@@ -427,12 +427,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 2
-  shotDelay: 0.5
+  shotDelay: 1
   fireSound: {fileID: 8300000, guid: 293c8e06a8a367f40900afa619a5a4ab, type: 3}
   jammedSound: {fileID: 8300000, guid: f23c556cf11dad1498c1d641c7636739, type: 3}
   reloadSound: {fileID: 8300000, guid: f68570e66f67fbd4691f8ed6ef88d259, type: 3}
   muzzleFlash: {fileID: 3913068289872767869}
-  infiniteShots: 1
   bulletOrigin: {fileID: 3330184880064426216}
 --- !u!95 &4844537238306748537
 Animator:
@@ -5388,15 +5387,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fadda3bfecbece340a398bc2f330e93c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fadda3bfecbece340a398bc2f330e93c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fadda3bfecbece340a398bc2f330e93c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fadda3bfecbece340a398bc2f330e93c, type: 3}
       propertyPath: m_LocalPosition.x

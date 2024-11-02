@@ -1631,6 +1631,7 @@ GameObject:
   - component: {fileID: 8021911724086842560}
   - component: {fileID: 6350301491106185551}
   - component: {fileID: 4895060597744582109}
+  - component: {fileID: 6027367142235657683}
   m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
@@ -1670,7 +1671,7 @@ MonoBehaviour:
   m_Camera: {fileID: 3416201976061522585}
   m_OriginBaseGameObject: {fileID: 3226459122634426697}
   m_CameraFloorOffsetObject: {fileID: 7013669255105502521}
-  m_RequestedTrackingOriginMode: 1
+  m_RequestedTrackingOriginMode: 2
   m_CameraYOffset: 1.36144
 --- !u!143 &7965924536436652630
 CharacterController:
@@ -1779,11 +1780,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a39f467de5d9d146a4dbd66d9faf81e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentPlayerMask: 0
-  playerMaskIndex:
-    m_InternalValue: 0
-  networkObject: {fileID: 0}
-  maskParent: {fileID: 5828711959780584032}
+--- !u!114 &6027367142235657683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3226459122634426697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1eb6212bb890144b992411e858f3939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftHandHapticImpulsePlayer: {fileID: 9125947765369911686}
+  rightHandHapticImpulsePlayer: {fileID: 4823807211937221518}
 --- !u!1 &3363565431450822012
 GameObject:
   m_ObjectHideFlags: 0
@@ -5915,6 +5925,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7000644830163578015, guid: 625e54e3f06e00c47aed95fe2f295e24, type: 3}
     - {fileID: 4414028243088105826, guid: 625e54e3f06e00c47aed95fe2f295e24, type: 3}
+    - {fileID: 5361119190209947427, guid: 625e54e3f06e00c47aed95fe2f295e24, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
