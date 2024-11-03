@@ -21,7 +21,7 @@ public class GunController : MonoBehaviour
     private Animator animator;
     private readonly WaitForSeconds timeBetweenShotAndReload = new (.5f);
     private readonly WaitForSeconds reloadTime = new (.7f);
-    private float jamChance = 0.2f;                // 20% chance of jamming
+    private float jamChance = 0.05f;                // 5% chance of jamming
     private bool canFire = true;                   // Tracks whether gun can fire
     private int shotsRemaining = 2;                // Allow two shots before reloading
     private static readonly int ReloadAnimatorHash = Animator.StringToHash("Reload");
@@ -71,10 +71,16 @@ public class GunController : MonoBehaviour
         if (Physics.Raycast(ray, out hit, range))
         {
             Enemy enemy = hit.collider.GetComponent<Enemy>();
+            Interactable interactable = hit.collider.GetComponent<Interactable>();
             if (enemy != null)
             {
                 Debug.LogWarning("We have hit a enemy, now he needs to die");
                 enemy.Die();
+            }
+            else if (interactable != null)
+            {
+                Debug.LogWarning("We have hit an interactable");
+                interactable.OnShotHit();
             }
             else
                 Debug.Log("We have missed the enemy");
