@@ -7,6 +7,7 @@ TagManager:
   - Anchor
   - Light
   - Water
+  - Igniteable
   layers:
   - Default
   - TransparentFX

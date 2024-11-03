@@ -25,6 +25,8 @@ public class PointLightTimer : MonoBehaviour
     private float decayTimer = 0f;
     private bool decayComplete;
     
+    public bool DecayComplete => decayComplete;
+    
     private void Start()
     {
         // Set initial values
