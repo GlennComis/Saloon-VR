@@ -10,6 +10,7 @@ public class PointLightTimer : MonoBehaviour
     [Header("Dependencies")]
     [SerializeField] private Light pointLight;
     [SerializeField] private SphereCollider sphereCollider;
+    //[SerializeField] private GameObject candleParticle;
     
     [Header("Optional Blendshape")]
     [SerializeField] private List<SkinnedMeshRenderer> skinnedMeshRenderers; // The renderer with the blendshape
@@ -78,6 +79,7 @@ public class PointLightTimer : MonoBehaviour
         pointLight.intensity = 0;
         sphereCollider.radius = 0.1f;
             
+        //candleParticle.SetActive(false);
         decayComplete = true;
         OnFlameExtinguished?.Invoke(extinguishedByWater);
     }
@@ -98,6 +100,7 @@ public class PointLightTimer : MonoBehaviour
                 skinnedMeshRenderer.SetBlendShapeWeight(BLEND_SHAPE_INDEX, 0);
         }
         
+        //candleParticle.SetActive(true);
         decayComplete = false;
     }
 }

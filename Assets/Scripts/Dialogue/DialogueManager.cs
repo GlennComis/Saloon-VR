@@ -27,7 +27,7 @@ public class DialogueManager : SingletonMonoBehaviour<DialogueManager>
     [SerializeField] private GameObject canvasGameObject;
     
     private float dialogueTimer = 0f;
-    private float dialogueInterval = 6f; // Interval in seconds
+    private float dialogueInterval = 4f; // Interval in seconds
     public bool IsInConversation { get; private set; }
 
     private void Update()
@@ -74,10 +74,15 @@ public class DialogueManager : SingletonMonoBehaviour<DialogueManager>
         if (!IsInConversation) return;
         
         currentDialogueIndex++;
-        
+
+        if (currentDialogueIndex == currentConversation.dialogueScriptableObjects.Count - 1)
+        {
+            dialogueTimer += dialogueInterval;
+        }
+
         if (currentDialogueIndex > currentConversation.dialogueScriptableObjects.Count - 1)
         {
-          EndConversation();
+            EndConversation();
             return;
         }
         
@@ -94,7 +99,6 @@ public class DialogueManager : SingletonMonoBehaviour<DialogueManager>
 
     private void EndConversation()
     {
-    
         canvasGameObject.SetActive(false);
         currentDialogueIndex = 0;
         IsInConversation = false;
