@@ -433,7 +433,8 @@ MonoBehaviour:
   jammedSound: {fileID: 8300000, guid: f23c556cf11dad1498c1d641c7636739, type: 3}
   reloadSound: {fileID: 8300000, guid: f68570e66f67fbd4691f8ed6ef88d259, type: 3}
   muzzleFlash: {fileID: 158812020506294589}
-  muzzleFlashLight: {fileID: 4461126234041324349}
+  muzzleFlashLight: {fileID: 4800065841966325094}
+  muzzleFlashDuration: 0.25
   bulletOrigin: {fileID: 3330184880064426216}
 --- !u!95 &4844537238306748537
 Animator:
@@ -505,7 +506,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8082697507875062367
 Transform:
   m_ObjectHideFlags: 0
@@ -530,12 +531,12 @@ Light:
   m_GameObject: {fileID: 4461126234041324349}
   m_Enabled: 1
   serializedVersion: 11
-  m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 7.15
-  m_Range: 6.55
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_Type: 0
+  m_Color: {r: 1, g: 0.94636333, b: 0.7783019, a: 1}
+  m_Intensity: 0
+  m_Range: 12.72
+  m_SpotAngle: 162.51936
+  m_InnerSpotAngle: 60.371147
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
@@ -657,9 +658,9 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:

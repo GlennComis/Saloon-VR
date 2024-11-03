@@ -126,7 +126,7 @@ public class GunController : MonoBehaviour
         muzzleFlashLight.intensity = 0f;
 
         // Animate the light's intensity from 0 to 1 and back to 0 once
-        muzzleFlashLight.DOIntensity(7.15f, muzzleFlashDuration / 2) // Animate to intensity 1
+        muzzleFlashLight.DOIntensity(81.47f, muzzleFlashDuration / 2) // Animate to intensity 1
             .OnComplete(() => muzzleFlashLight.DOIntensity(0f, muzzleFlashDuration / 2)) // Then animate back to 0
             .SetEase(Ease.OutSine); // Smooth easing for the pulse effect
     }
