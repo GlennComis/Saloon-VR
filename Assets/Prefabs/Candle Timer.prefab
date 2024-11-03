@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 5451035141462347015}
   - component: {fileID: 9012948437676947600}
   - component: {fileID: 1675602273143804750}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Timer Point Light
   m_TagString: Light
   m_Icon: {fileID: 0}
@@ -269,25 +269,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f442ed734c413d439dfb48423768056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnDecayComplete:
+  OnFlameExtinguished:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   pointLight: {fileID: 2695724594856223066}
   sphereCollider: {fileID: 9012948437676947600}
   skinnedMeshRenderers: []
-  blendShapeIndex: 0
   decayDuration: 300
   initialRange: 4
   initialIntensity: 0.5

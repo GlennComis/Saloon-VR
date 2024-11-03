@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class PointLightTimer : MonoBehaviour
 {
-    public UnityEvent OnDecayComplete;
+    public UnityEvent<bool> OnFlameExtinguished;
     
     [Header("Dependencies")]
     [SerializeField] private Light pointLight;
@@ -13,13 +13,13 @@ public class PointLightTimer : MonoBehaviour
     
     [Header("Optional Blendshape")]
     [SerializeField] private List<SkinnedMeshRenderer> skinnedMeshRenderers; // The renderer with the blendshape
-    [SerializeField] private int blendShapeIndex = 0; // Index of the blendshape to modify
     
     [Header("Configuration")]
     [SerializeField] private float decayDuration = 5f; // Time in seconds for the decay to complete
     [SerializeField] private float initialRange = 3f; // Starting range for both collider and light
     [SerializeField] private float initialIntensity = 0.5f; // Starting intensity for the light
     [SerializeField] private Ease lightDecayEase = Ease.OutCirc; // Easing function for light decay
+    private const int BLEND_SHAPE_INDEX = 0; // Index of the blendshape to modify
 
     // State
     private float decayTimer = 0f;
@@ -31,14 +31,6 @@ public class PointLightTimer : MonoBehaviour
         pointLight.range = initialRange;
         pointLight.intensity = initialIntensity;
         sphereCollider.radius = initialRange;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        // if (other.CompareTag("Respawn"))
-        //     Replenish();
-        if (other.CompareTag("Finish"))
-            Extinguish();
     }
 
     private void Update()
@@ -68,7 +60,7 @@ public class PointLightTimer : MonoBehaviour
             {
                 float blendShapeWeight = Mathf.Lerp(0, 100, 1f - decayProgress); // 1 - decayProgress to go from 0 to 100
                 foreach (var skinnedMeshRenderer in skinnedMeshRenderers)
-                    skinnedMeshRenderer.SetBlendShapeWeight(blendShapeIndex, blendShapeWeight);
+                    skinnedMeshRenderer.SetBlendShapeWeight(BLEND_SHAPE_INDEX, blendShapeWeight);
             }
         }
         else
@@ -78,17 +70,17 @@ public class PointLightTimer : MonoBehaviour
         }
     }
 
-    private void Extinguish()
+    public void Extinguish(bool extinguishedByWater = false)
     {
         pointLight.range = 0;
         pointLight.intensity = 0;
         sphereCollider.radius = 0.1f;
             
         decayComplete = true;
-        OnDecayComplete?.Invoke();
+        OnFlameExtinguished?.Invoke(extinguishedByWater);
     }
 
-    private void Replenish()
+    public void Replenish()
     {
         decayTimer = 0f;
 
@@ -101,7 +93,7 @@ public class PointLightTimer : MonoBehaviour
         if (skinnedMeshRenderers.Count > 0)
         {
             foreach (var skinnedMeshRenderer in skinnedMeshRenderers)
-                skinnedMeshRenderer.SetBlendShapeWeight(blendShapeIndex, 0);
+                skinnedMeshRenderer.SetBlendShapeWeight(BLEND_SHAPE_INDEX, 0);
         }
         
         decayComplete = false;
