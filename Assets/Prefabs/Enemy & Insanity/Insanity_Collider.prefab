@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1425125323873765880}
   - component: {fileID: 1764775576074264790}
   - component: {fileID: 7179562720334859460}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Insanity_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

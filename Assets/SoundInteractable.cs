@@ -3,10 +3,10 @@ using UnityEngine;
 public class SoundInteractable : Interactable
 {
    [SerializeField] 
-   private AudioClip shotSound;
-   private AudioSource audioSource;
+   protected AudioClip shotSound;
+   protected AudioSource audioSource;
 
-   private void Awake()
+   protected virtual void Awake()
    {
       audioSource = gameObject.GetComponent<AudioSource>();
       

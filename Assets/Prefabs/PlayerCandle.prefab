@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6987611807232748885}
   - component: {fileID: 742722683068999991}
   - component: {fileID: 8978383111348937495}
+  - component: {fileID: 8396163955020650869}
   m_Layer: 0
   m_Name: PlayerCandle
   m_TagString: Untagged
@@ -314,6 +315,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.15, y: 0.2, z: 0.15}
   m_Center: {x: 0, y: 0.35, z: 0}
+--- !u!114 &8396163955020650869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563030228603679857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf82df79358a9f4587ba24eb2d8f31b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointLightTimer: {fileID: 277610738148135179}
 --- !u!1 &6826347792071615135
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +375,7 @@ Light:
   m_Type: 2
   m_Color: {r: 0.9622642, g: 0.8243656, b: 0.56737274, a: 1}
   m_Intensity: 0.333
-  m_Range: 3
+  m_Range: 5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -456,7 +470,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 3
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &277610738148135179
 MonoBehaviour:
@@ -470,7 +484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f442ed734c413d439dfb48423768056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnDecayComplete:
+  OnFlameExtinguished:
     m_PersistentCalls:
       m_Calls: []
   pointLight: {fileID: 4724972862750149887}
@@ -478,10 +492,9 @@ MonoBehaviour:
   skinnedMeshRenderers:
   - {fileID: 1611992953098438747}
   - {fileID: 8760371230237736013}
-  blendShapeIndex: 0
   decayDuration: 30
-  initialRange: 3
-  initialIntensity: 0.333
+  initialRange: 5
+  initialIntensity: 0.5
   lightDecayEase: 21
 --- !u!1 &9075718794913915014
 GameObject:
