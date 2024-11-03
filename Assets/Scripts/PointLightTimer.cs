@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -18,6 +19,7 @@ public class PointLightTimer : MonoBehaviour
     [SerializeField] private float decayDuration = 5f; // Time in seconds for the decay to complete
     [SerializeField] private float initialRange = 3f; // Starting range for both collider and light
     [SerializeField] private float initialIntensity = 0.5f; // Starting intensity for the light
+    [SerializeField] private Ease lightDecayEase = Ease.OutCirc; // Easing function for light decay
 
     // State
     private float decayTimer = 0f;
@@ -35,6 +37,8 @@ public class PointLightTimer : MonoBehaviour
     {
         if (other.CompareTag("Respawn"))
             Replenish();
+        if (other.CompareTag("Finish"))
+            Extinguish();
     }
 
     private void Update()
@@ -48,12 +52,14 @@ public class PointLightTimer : MonoBehaviour
             decayTimer += Time.deltaTime;
 
             // Calculate the decay progress as a value between 1 (start) and 0 (end)
-            float decayProgress = 1f - (decayTimer / decayDuration);
+            float decayProgressLinear = 1f - (decayTimer / decayDuration);
+            float decayProgress = DOVirtual.EasedValue(0f, 1f, decayProgressLinear, lightDecayEase);
 
             // Apply decay to range and intensity
             pointLight.range = initialRange * decayProgress;
             pointLight.intensity = initialIntensity * decayProgress;
-            sphereCollider.radius = initialRange * decayProgress;
+            if (!float.IsNaN(decayProgress)) // Ensure the decay progress is a valid number (prevents error at very last frame).
+                sphereCollider.radius = initialRange * decayProgress;
             
             // Update blendshape weight from 0 to 100 based on decay progress
             if (skinnedMeshRenderers.Count > 0)
@@ -66,18 +72,20 @@ public class PointLightTimer : MonoBehaviour
         else
         {
             // Once decay is complete, ensure values are set to 0
-            pointLight.range = 0;
-            pointLight.intensity = 0;
-            sphereCollider.radius = 0.1f;
-            
-            decayComplete = true;
-            OnDecayComplete?.Invoke();
-
-            // Optionally, destroy the GameObject if you want it to disappear
-            // Destroy(gameObject);
+            Extinguish();
         }
     }
-    
+
+    private void Extinguish()
+    {
+        pointLight.range = 0;
+        pointLight.intensity = 0;
+        sphereCollider.radius = 0.1f;
+            
+        decayComplete = true;
+        OnDecayComplete?.Invoke();
+    }
+
     private void Replenish()
     {
         decayTimer = 0f;

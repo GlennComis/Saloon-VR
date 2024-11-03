@@ -481,6 +481,7 @@ MonoBehaviour:
   decayDuration: 30
   initialRange: 1.5
   initialIntensity: 0.333
+  lightDecayEasy: 21
 --- !u!1 &9075718794913915014
 GameObject:
   m_ObjectHideFlags: 0
