@@ -11,5 +11,8 @@ public class PointLightTimerCandleColliderHandler : MonoBehaviour
         
         if (other.CompareTag("Respawn"))
             pointLightTimer.Replenish();
+
+        if (other.CompareTag("Igniteable") && !pointLightTimer.DecayComplete)
+            other.GetComponent<Igniteable>().Ignite();
     }
 }

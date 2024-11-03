@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 2253273181496204093}
   - component: {fileID: 9110988014377099990}
   - component: {fileID: 277610738148135179}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Timer Point Light
   m_TagString: Light
   m_Icon: {fileID: 0}
@@ -493,8 +493,8 @@ MonoBehaviour:
   - {fileID: 1611992953098438747}
   - {fileID: 8760371230237736013}
   decayDuration: 30
-  initialRange: 5
-  initialIntensity: 0.5
+  initialRange: 10
+  initialIntensity: 0.333
   lightDecayEase: 21
 --- !u!1 &9075718794913915014
 GameObject:
