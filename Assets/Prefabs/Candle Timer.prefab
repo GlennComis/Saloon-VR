@@ -160,7 +160,7 @@ Light:
   m_Type: 2
   m_Color: {r: 0.9622642, g: 0.8243656, b: 0.56737274, a: 1}
   m_Intensity: 0.5
-  m_Range: 3
+  m_Range: 4
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -255,7 +255,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 3
+  m_Radius: 4
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1675602273143804750
 MonoBehaviour:
@@ -289,8 +289,9 @@ MonoBehaviour:
   skinnedMeshRenderers: []
   blendShapeIndex: 0
   decayDuration: 300
-  initialRange: 3
+  initialRange: 4
   initialIntensity: 0.5
+  lightDecayEase: 21
 --- !u!1 &7332823654415180101
 GameObject:
   m_ObjectHideFlags: 0

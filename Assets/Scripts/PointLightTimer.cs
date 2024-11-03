@@ -35,8 +35,8 @@ public class PointLightTimer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Respawn"))
-            Replenish();
+        // if (other.CompareTag("Respawn"))
+        //     Replenish();
         if (other.CompareTag("Finish"))
             Extinguish();
     }
@@ -55,11 +55,13 @@ public class PointLightTimer : MonoBehaviour
             float decayProgressLinear = 1f - (decayTimer / decayDuration);
             float decayProgress = DOVirtual.EasedValue(0f, 1f, decayProgressLinear, lightDecayEase);
 
+            if (float.IsNaN(decayProgress)) // Ensure the decay progress is a valid number (prevents errors at very last frame).
+                return;
+
             // Apply decay to range and intensity
             pointLight.range = initialRange * decayProgress;
             pointLight.intensity = initialIntensity * decayProgress;
-            if (!float.IsNaN(decayProgress)) // Ensure the decay progress is a valid number (prevents error at very last frame).
-                sphereCollider.radius = initialRange * decayProgress;
+            sphereCollider.radius = initialRange * decayProgress;
             
             // Update blendshape weight from 0 to 100 based on decay progress
             if (skinnedMeshRenderers.Count > 0)

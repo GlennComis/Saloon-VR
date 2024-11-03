@@ -33,6 +33,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 738187964876168236}
   - {fileID: 6588034208236738110}
   - {fileID: 6276628623644142853}
   m_Father: {fileID: 0}
@@ -342,11 +343,11 @@ Transform:
   m_GameObject: {fileID: 6826347792071615135}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 14.98, z: 0}
-  m_LocalScale: {x: 48.562996, y: 48.562996, z: 48.562996}
+  m_LocalPosition: {x: 0.014070034, y: 0.57476526, z: -0.0047393143}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6276628623644142853}
+  m_Father: {fileID: 3301838559636046450}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &4724972862750149887
 Light:
@@ -360,7 +361,7 @@ Light:
   m_Type: 2
   m_Color: {r: 0.9622642, g: 0.8243656, b: 0.56737274, a: 1}
   m_Intensity: 0.333
-  m_Range: 1.5
+  m_Range: 3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -455,7 +456,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.5
+  m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &277610738148135179
 MonoBehaviour:
@@ -479,9 +480,9 @@ MonoBehaviour:
   - {fileID: 8760371230237736013}
   blendShapeIndex: 0
   decayDuration: 30
-  initialRange: 1.5
+  initialRange: 3
   initialIntensity: 0.333
-  lightDecayEasy: 21
+  lightDecayEase: 21
 --- !u!1 &9075718794913915014
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,10 +644,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d8f5794aadb37684aa129af735ef28bc, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 064e94ddc4746d442a74997af6bca16c, type: 3}
-      insertIndex: 0
-      addedObject: {fileID: 738187964876168236}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 064e94ddc4746d442a74997af6bca16c, type: 3}
 --- !u!137 &1611992953098438747 stripped
