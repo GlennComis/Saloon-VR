@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using StudioXRToolkit.Runtime.Scripts.Abstracts;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
+    public UnityEvent OnNumberLocksCorrect;
+    
     [SerializeField] 
     private AudioClip bellPuzzleCorrect;
     [SerializeField] 
@@ -13,7 +16,12 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     [SerializeField]
     private GameObject hiddenNumber;
+    [SerializeField]
+    private GameObject thirdNumber;
     private bool didDrink;
+
+    public int expectedValue1, expectedValue2, expectedValue3;
+    public NumberKnob numberKnob1, numberKnob2, numberKnob3;
     
     // Reference to the bells in the correct order
     [SerializeField] private List<SoundInteractable> solutionOrder;
@@ -34,6 +42,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         // Optional: Set the audio source settings
         audioSource.playOnAwake = false;
         hiddenNumber.SetActive(false);
+        thirdNumber.SetActive(false);
     }
     
     // Method called by each bell when it is shot
@@ -77,10 +86,20 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
             audioSource.Stop();
             var currentAudioClip = isCorrect ? bellPuzzleCorrect : bellPuzzleIncorrect;
             audioSource.PlayOneShot(currentAudioClip);
+            thirdNumber.SetActive(true);
         }
         else
         {
             Debug.LogWarning("No audio clip assigned to SoundInteractable!");
+        }
+    }
+
+    public void ValidateNumberKnobs()
+    {
+        if (numberKnob1.KnobValue == expectedValue1 && numberKnob2.KnobValue == expectedValue2 && numberKnob3.KnobValue == expectedValue3)
+        {
+            OnNumberLocksCorrect?.Invoke();
+            Debug.Log("Escaped!");
         }
     }
     

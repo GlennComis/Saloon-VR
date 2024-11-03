@@ -22,7 +22,7 @@ public class NumberKnob : MonoBehaviour
         
         if (!audioSource.isPlaying && KnobValue != previousValue)
             audioSource.Play();
-        
+
         previousValue = KnobValue;
     }
 }

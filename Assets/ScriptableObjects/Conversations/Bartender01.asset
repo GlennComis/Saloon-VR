@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Bartender01
   m_EditorClassIdentifier: 
   npcName: Bartender
-  dialogue: "With a number that\u2019s key to a lock\u2019s secret door, Use me wisely,
-    and you\u2019ll find treasure galore."
-  audioClip: {fileID: 0}
+  dialogue: All the ghouls were once mortals who tried to find the numbers, but they
+    all failed...
+  audioClip: {fileID: 8300000, guid: ddc9ac5b6ff88cc4f8dc142f4ca1874d, type: 3}

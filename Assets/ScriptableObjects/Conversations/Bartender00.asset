@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: Bartender00
   m_EditorClassIdentifier: 
   npcName: Bartender
-  dialogue: "I\u2019m round and shiny, with a value to find, In the Wild West, I'm
-    often entwined."
-  audioClip: {fileID: 0}
+  dialogue: There is no escape mortal....
+  audioClip: {fileID: 8300000, guid: 93a5c2cb2d340474eba29fa8f20f11aa, type: 3}
