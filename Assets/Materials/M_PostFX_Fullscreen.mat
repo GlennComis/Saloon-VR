@@ -115,7 +115,7 @@ Material:
     - _Parallax: 0.005
     - _PixelSize: 4
     - _Pixelate: 207.9
-    - _Posterize: 304
+    - _Posterize: 155
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.5

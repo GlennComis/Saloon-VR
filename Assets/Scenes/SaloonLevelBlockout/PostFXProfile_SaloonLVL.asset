@@ -152,6 +152,7 @@ MonoBehaviour:
   - {fileID: -4070010521723947951}
   - {fileID: -8624411588918250221}
   - {fileID: 855444839568404813}
+  - {fileID: 4759249572653987210}
 --- !u!114 &855444839568404813
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -341,3 +342,19 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+--- !u!114 &4759249572653987210
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85424a2320295184eb1b25661e2f8f6c, type: 3}
+  m_Name: URP_PixelationVolumeComponent
+  m_EditorClassIdentifier: 
+  active: 1
+  intensity:
+    m_OverrideState: 1
+    m_Value: 1
