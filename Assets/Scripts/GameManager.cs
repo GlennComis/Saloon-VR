@@ -10,6 +10,10 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     [SerializeField] 
     private AudioClip bellPuzzleIncorrect;
     private AudioSource audioSource;
+
+    [SerializeField]
+    private GameObject hiddenNumber;
+    private bool didDrink;
     
     // Reference to the bells in the correct order
     [SerializeField] private List<SoundInteractable> solutionOrder;
@@ -29,6 +33,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
         // Optional: Set the audio source settings
         audioSource.playOnAwake = false;
+        hiddenNumber.SetActive(false);
     }
     
     // Method called by each bell when it is shot
@@ -82,5 +87,13 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     public void GameOver()
     {
         Debug.Log("Time's up Motherfucker! Game Over! Darkness reigns etc...");
+    }
+
+    public void CompletedDrink()
+    {
+        if (didDrink) return;
+        didDrink = true;
+        
+        hiddenNumber.SetActive(true);
     }
 }

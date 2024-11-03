@@ -354,7 +354,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3192684866506176271, guid: fba432ee19a6b8942b386eed7a800e29, type: 3}
       propertyPath: 'm_BlendShapeWeights.Array.data[0]'
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7046437153753549046, guid: fba432ee19a6b8942b386eed7a800e29, type: 3}
       propertyPath: m_LocalPosition.x
@@ -407,6 +407,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7674742814540304972, guid: fba432ee19a6b8942b386eed7a800e29, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2127279950233356134}
+    - targetCorrespondingSourceObject: {fileID: 7674742814540304972, guid: fba432ee19a6b8942b386eed7a800e29, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4274275855205383998}
+    - targetCorrespondingSourceObject: {fileID: 7674742814540304972, guid: fba432ee19a6b8942b386eed7a800e29, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7711642263292014535}
   m_SourcePrefab: {fileID: 100100000, guid: fba432ee19a6b8942b386eed7a800e29, type: 3}
 --- !u!1 &1229911481700963493 stripped
 GameObject:
@@ -428,8 +434,46 @@ MonoBehaviour:
   skinnedMeshRenderer: {fileID: 6331249554813383142}
   blendShapeIndex: 0
   tiltThreshold: 55
-  minBlendSpeed: 60
-  maxBlendSpeed: 200
+  minBlendSpeed: 40
+  maxBlendSpeed: 80
+  currentWeight: 0
+  isTilting: 0
+--- !u!114 &4274275855205383998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229911481700963493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c89a7b37fb225244a16899d51212f8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  drinkingSound: {fileID: 8300000, guid: ea2e4d5fa7754de4db60f0d4e5f7c12f, type: 3}
+  burpSound: {fileID: 8300000, guid: 2519346e4754acc4aac0551c4b7d213d, type: 3}
+--- !u!65 &7711642263292014535
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229911481700963493}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.15, y: 0.26811838, z: 0.15}
+  m_Center: {x: -0.0023391843, y: 0.13766426, z: -0.00084745884}
 --- !u!4 &1898924018351050271 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7046437153753549046, guid: fba432ee19a6b8942b386eed7a800e29, type: 3}

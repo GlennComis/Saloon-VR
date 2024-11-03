@@ -8,7 +8,9 @@ public class TiltToBlendshape : MonoBehaviour
     public float minBlendSpeed = 20f; // Minimum speed at which the blendshape weight changes
     public float maxBlendSpeed = 60f; // Maximum speed for blendshape transition at extreme tilts
 
-    private float currentWeight = 0f; // Current blendshape weight
+    public float currentWeight = 0f; // Current blendshape weight
+
+    public bool isTilting;
 
     void Update()
     {
@@ -31,7 +33,7 @@ public class TiltToBlendshape : MonoBehaviour
         float blendSpeed = Mathf.Lerp(minBlendSpeed, maxBlendSpeed, maxTiltExcess / (180f - tiltThreshold));
 
         // Check if either rotation angle exceeds the threshold (positive or negative)
-        bool isTilting = Mathf.Abs(xRotation) > tiltThreshold || Mathf.Abs(zRotation) > tiltThreshold;
+        isTilting = Mathf.Abs(xRotation) > tiltThreshold || Mathf.Abs(zRotation) > tiltThreshold;
 
         // Adjust blendshape weight based on tilt
         if (isTilting)
