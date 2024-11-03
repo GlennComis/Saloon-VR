@@ -98,7 +98,7 @@ Material:
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
     - _Fullscreen_AlphaBlendOperation: 0
-    - _Fullscreen_BlendMode: 0
+    - _Fullscreen_BlendMode: 1
     - _Fullscreen_ColorBlendOperation: 0
     - _Fullscreen_DepthTest: 8
     - _Fullscreen_DepthWrite: 1

@@ -1,3 +1,5 @@
+using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource), typeof(Animator))]
@@ -10,12 +12,15 @@ public class GunController : MonoBehaviour
     public AudioClip jammedSound;                  // Sound that plays when the gun jams
     public AudioClip reloadSound;                  // Sound that plays when reloading
     public ParticleSystem muzzleFlash;
+    public Light muzzleFlashLight;
+    public float muzzleFlashDuration = .25f;
 
     [Header("Bullet Settings")]
     public Transform bulletOrigin;
     private AudioSource audioSource;
     private Animator animator;
-    private WaitForSeconds timeBetweenShotAndReload = new WaitForSeconds(.5f);
+    private readonly WaitForSeconds timeBetweenShotAndReload = new (.5f);
+    private readonly WaitForSeconds reloadTime = new (.7f);
     private float jamChance = 0.2f;                // 20% chance of jamming
     private bool canFire = true;                   // Tracks whether gun can fire
     private int shotsRemaining = 2;                // Allow two shots before reloading
@@ -55,6 +60,8 @@ public class GunController : MonoBehaviour
             muzzleFlash.Play();
         }
 
+        MuzzleFlash();
+
         Vector3 origin = bulletOrigin != null ? bulletOrigin.position : transform.position;
         Vector3 direction = bulletOrigin != null ? bulletOrigin.forward : transform.forward;
 
@@ -63,11 +70,14 @@ public class GunController : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, range))
         {
-            PlayerController player = hit.collider.GetComponent<PlayerController>();
-            if (player != null)
-                Debug.LogWarning("We have hit a player, now he needs to die");
+            Enemy enemy = hit.collider.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                Debug.LogWarning("We have hit a enemy, now he needs to die");
+                enemy.Die();
+            }
             else
-                Debug.Log("We have missed the player");
+                Debug.Log("We have missed the enemy");
         }
 
         shotsRemaining--;
@@ -94,18 +104,33 @@ public class GunController : MonoBehaviour
         }
     }
 
-    private System.Collections.IEnumerator RestoreFireAfterDelay(bool shouldReload)
+    private IEnumerator RestoreFireAfterDelay(bool shouldReload)
     {
         if (shouldReload)
         {
             yield return timeBetweenShotAndReload;  
             Reload();
+            yield return reloadTime; 
+            canFire = true;
         }
-        
-        yield return new WaitForSeconds(shotDelay);
-        canFire = true;
+        else
+        {
+            yield return new WaitForSeconds(shotDelay);
+            canFire = true;   
+        }
     }
 
+    private void MuzzleFlash()
+    {
+        // Ensure the light starts at intensity 0
+        muzzleFlashLight.intensity = 0f;
+
+        // Animate the light's intensity from 0 to 1 and back to 0 once
+        muzzleFlashLight.DOIntensity(7.15f, muzzleFlashDuration / 2) // Animate to intensity 1
+            .OnComplete(() => muzzleFlashLight.DOIntensity(0f, muzzleFlashDuration / 2)) // Then animate back to 0
+            .SetEase(Ease.OutSine); // Smooth easing for the pulse effect
+    }
+    
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
