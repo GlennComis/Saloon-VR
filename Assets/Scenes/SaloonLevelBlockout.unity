@@ -1393,6 +1393,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5426302071045708890, guid: ed4709035b7fee5479295afeed805e0b, type: 3}
+      propertyPath: numberOne
+      value: 
+      objectReference: {fileID: 950485519}
+    - target: {fileID: 5426302071045708890, guid: ed4709035b7fee5479295afeed805e0b, type: 3}
+      propertyPath: numberTwo
+      value: 
+      objectReference: {fileID: 1181788811}
+    - target: {fileID: 5426302071045708890, guid: ed4709035b7fee5479295afeed805e0b, type: 3}
       propertyPath: numberKnob1
       value: 
       objectReference: {fileID: 237407106}
@@ -1404,6 +1412,10 @@ PrefabInstance:
       propertyPath: numberKnob3
       value: 
       objectReference: {fileID: 290696256}
+    - target: {fileID: 5426302071045708890, guid: ed4709035b7fee5479295afeed805e0b, type: 3}
+      propertyPath: numberThree
+      value: 
+      objectReference: {fileID: 373938556}
     - target: {fileID: 5426302071045708890, guid: ed4709035b7fee5479295afeed805e0b, type: 3}
       propertyPath: thirdNumber
       value: 
@@ -1925,7 +1937,7 @@ GameObject:
   - component: {fileID: 373938557}
   - component: {fileID: 373938556}
   m_Layer: 0
-  m_Name: ThirdNumber
+  m_Name: NumberThree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3259,7 +3271,7 @@ GameObject:
   - component: {fileID: 950485520}
   - component: {fileID: 950485519}
   m_Layer: 0
-  m_Name: FirstNumber
+  m_Name: NumberOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4115,6 +4127,17 @@ Transform:
   - {fileID: 1805087908}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1181788811 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8447044248158488713, guid: eecc04c9846f1414494f4c6b9584792e, type: 3}
+  m_PrefabInstance: {fileID: 1322342600}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1186679644 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301838559636046450, guid: 9d80a92e9cdc5204da74e0509d19471a, type: 3}
@@ -6356,6 +6379,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 305570435}
   - {fileID: 1174427990}
   - {fileID: 1939539261}
   - {fileID: 290348076}
@@ -6368,7 +6392,6 @@ SceneRoots:
   - {fileID: 799930566}
   - {fileID: 42105224}
   - {fileID: 599691001}
-  - {fileID: 305570435}
   - {fileID: 95896116}
   - {fileID: 689207040}
   - {fileID: 133246048}
