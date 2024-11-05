@@ -8,6 +8,8 @@ public class Igniteable : MonoBehaviour
     
     [Header("Dependencies")]
     [SerializeField] private Light pointLight;
+    [SerializeField] private GameObject fireParticle;
+    
     
     [Header("Configuration")]
     [SerializeField] private float targetIntensity = 0.2f;
@@ -25,6 +27,7 @@ public class Igniteable : MonoBehaviour
         
         pointLight.DOIntensity(targetIntensity, ignitionSpeed);
         ignited = true;
+        fireParticle.SetActive(true);
         OnIgnited?.Invoke();
     }
 
