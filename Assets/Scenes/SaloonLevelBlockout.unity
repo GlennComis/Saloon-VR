@@ -42,8 +42,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 13
-  m_BakeOnSceneLoad: 0
+  serializedVersion: 12
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -2572,14 +2571,6 @@ PrefabInstance:
     - target: {fileID: 1484134411594800729, guid: 7422edb7e9555e9448e0749ac231f245, type: 3}
       propertyPath: m_Name
       value: Candle Timer
-      objectReference: {fileID: 0}
-    - target: {fileID: 1675602273143804750, guid: 7422edb7e9555e9448e0749ac231f245, type: 3}
-      propertyPath: OnDecayComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 305570436}
-    - target: {fileID: 1675602273143804750, guid: 7422edb7e9555e9448e0749ac231f245, type: 3}
-      propertyPath: OnDecayComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GameOver
       objectReference: {fileID: 0}
     - target: {fileID: 2476248001993188983, guid: 7422edb7e9555e9448e0749ac231f245, type: 3}
       propertyPath: m_LocalPosition.x

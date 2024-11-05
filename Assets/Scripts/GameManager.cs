@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using StudioXRToolkit.Runtime.Scripts.Abstracts;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,13 +15,16 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     private AudioClip bellPuzzleIncorrect;
     private AudioSource audioSource;
 
+
     [SerializeField]
-    private GameObject hiddenNumber;
+    private TextMeshPro numberOne;
     [SerializeField]
-    private GameObject thirdNumber;
+    private TextMeshPro numberTwo;
+    [SerializeField]
+    private TextMeshPro numberThree;
     private bool didDrink;
 
-    public int expectedValue1, expectedValue2, expectedValue3;
+    private int expectedValue1, expectedValue2, expectedValue3;
     public NumberKnob numberKnob1, numberKnob2, numberKnob3;
     
     // Reference to the bells in the correct order
@@ -41,8 +45,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
         // Optional: Set the audio source settings
         audioSource.playOnAwake = false;
-        hiddenNumber.SetActive(false);
-        thirdNumber.SetActive(false);
+        InitNumbers();
     }
     
     // Method called by each bell when it is shot
@@ -86,7 +89,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
             audioSource.Stop();
             var currentAudioClip = isCorrect ? bellPuzzleCorrect : bellPuzzleIncorrect;
             audioSource.PlayOneShot(currentAudioClip);
-            thirdNumber.SetActive(true);
+            numberThree.gameObject.SetActive(true);
         }
         else
         {
@@ -94,6 +97,25 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         }
     }
 
+    private void InitNumbers()
+    {
+        numberOne.gameObject.SetActive(false);
+        numberTwo.gameObject.SetActive(false);
+        
+        expectedValue1 = GetRandomNumber();
+        expectedValue2 = GetRandomNumber();
+        expectedValue3 = GetRandomNumber();
+        
+        numberOne.SetText(expectedValue1.ToString());
+        numberTwo.SetText(expectedValue2.ToString());
+        numberThree.SetText(expectedValue3.ToString());
+    }
+    
+    private int GetRandomNumber()
+    {
+        return Random.Range(0, 10); // Random.Range for integers is exclusive of the max, so it generates between 0 and 9
+    }
+    
     public void ValidateNumberKnobs()
     {
         if (numberKnob1.KnobValue == expectedValue1 && numberKnob2.KnobValue == expectedValue2 && numberKnob3.KnobValue == expectedValue3)
@@ -113,6 +135,6 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         if (didDrink) return;
         didDrink = true;
         
-        hiddenNumber.SetActive(true);
+        numberOne.gameObject.SetActive(true);
     }
 }
