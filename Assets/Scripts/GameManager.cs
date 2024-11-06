@@ -101,6 +101,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     {
         numberOne.gameObject.SetActive(false);
         numberTwo.gameObject.SetActive(false);
+        numberThree.gameObject.SetActive(false);
         
         expectedValue1 = GetRandomNumber();
         expectedValue2 = GetRandomNumber();

@@ -32,6 +32,6 @@ public class DestroyableInteractable : SoundInteractable
                 yield return null;
             }
         }
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

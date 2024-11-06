@@ -58,29 +58,16 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 76430eb1eb6edfb49a55c53d15079b59, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1380987678072490195}
+      addedObject: {fileID: 3685637757519767524}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 76430eb1eb6edfb49a55c53d15079b59, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3685637757519767524}
+      addedObject: {fileID: 401699940787638818}
   m_SourcePrefab: {fileID: 100100000, guid: 76430eb1eb6edfb49a55c53d15079b59, type: 3}
 --- !u!1 &5328455187940475514 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 76430eb1eb6edfb49a55c53d15079b59, type: 3}
   m_PrefabInstance: {fileID: 4986346885998100267}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1380987678072490195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5328455187940475514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cd2128a2fd04b899f801d907df15a8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shotSound: {fileID: 8300000, guid: 292ec9432b373df4dab6f8f59210a472, type: 3}
 --- !u!65 &3685637757519767524
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -102,3 +89,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.016116973, y: 0.10194092, z: 0.08859992}
   m_Center: {x: -0.000035176054, y: 0.018369708, z: 0.0016237497}
+--- !u!114 &401699940787638818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5328455187940475514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8595e154f0104c999f870c5fb57fc50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotSound: {fileID: 8300000, guid: 292ec9432b373df4dab6f8f59210a472, type: 3}
+  door: {fileID: 0}
