@@ -3,7 +3,7 @@
 public class LockInteractable : DestroyableInteractable
 {
     [SerializeField]
-    private DoorLockAndPush door;
+    private Door door;
 
     public override void OnShotHit()
     {

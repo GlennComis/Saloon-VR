@@ -1,7 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class DoorLockAndPush : MonoBehaviour
+public class Door : MonoBehaviour
 {
     public float targetRotationZ;
     public float duration = 1f;
