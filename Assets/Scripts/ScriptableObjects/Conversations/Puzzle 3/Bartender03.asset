@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f2ce293ec4e13f4eb42bdb1caae49a2, type: 3}
-  m_Name: Bartender00
+  m_Name: Bartender03
   m_EditorClassIdentifier: 
   npcName: Bartender
-  dialogue: There is no escape mortal....
-  audioClip: {fileID: 8300000, guid: 93a5c2cb2d340474eba29fa8f20f11aa, type: 3}
+  dialogue: "But only if you\u2019ve got the eye to see it."
+  audioClip: {fileID: 8300000, guid: 2b7f8a6bdcc36ae4f9fd386ff8183894, type: 3}

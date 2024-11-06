@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d5b2043a9e4987a3fa2455f846e9d9, type: 3}
+  m_Name: _Bartender02
+  m_EditorClassIdentifier: 
+  dialogueScriptableObjects:
+  - {fileID: 11400000, guid: 709bc00f00a9e3b40af606252fff9829, type: 2}
+  - {fileID: 11400000, guid: c7289bb25c9953a47bb95dbac6b3d6ae, type: 2}
+  - {fileID: 11400000, guid: 3bbb29362f0bab64ab02866e266cf5ad, type: 2}

@@ -19,7 +19,6 @@ public class DialogueTrigger : MonoBehaviour
                 return;
             }
             
-            DialogueManager.Instance.SetCurrentConversation(conversationScriptableObject);
             DialogueManager.Instance.StartConversation();
         }
         else

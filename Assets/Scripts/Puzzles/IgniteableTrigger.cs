@@ -1,12 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class IgniteableTrigger : MonoBehaviour
 {
-    public UnityEvent OnIgnitedAll;
-    
     [SerializeField] private List<Igniteable> igniteables;
+    [SerializeField]
+    private GameObject painting;
     
     private int igniteablesCount;
     private int ignitedCount;
@@ -33,8 +32,8 @@ public class IgniteableTrigger : MonoBehaviour
         ignitedCount++;
         if (ignitedCount == igniteablesCount)
         {
-            Debug.Log("All igniteables have been ignited!");
-            OnIgnitedAll?.Invoke();
+            painting.SetActive(false);
+            GameManager.Instance.CompletedLightPuzzle();
         }
     }
 }

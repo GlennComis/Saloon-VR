@@ -2294,6 +2294,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3015376820018164979, guid: e88f3927b69d9f34a92518d08f321577, type: 3}
+      propertyPath: escape
+      value: 
+      objectReference: {fileID: 11400000, guid: 92c30df527faca647b417ec13a788565, type: 2}
+    - target: {fileID: 3015376820018164979, guid: e88f3927b69d9f34a92518d08f321577, type: 3}
+      propertyPath: puzzle1
+      value: 
+      objectReference: {fileID: 11400000, guid: 121e20e40b9f4a94094f68398c694e5e, type: 2}
+    - target: {fileID: 3015376820018164979, guid: e88f3927b69d9f34a92518d08f321577, type: 3}
+      propertyPath: puzzle2
+      value: 
+      objectReference: {fileID: 11400000, guid: dd78444bdfb520241a85f080d5bfcb78, type: 2}
+    - target: {fileID: 3015376820018164979, guid: e88f3927b69d9f34a92518d08f321577, type: 3}
+      propertyPath: puzzle3
+      value: 
+      objectReference: {fileID: 11400000, guid: 5b3690f345f14ac479da7ff1d3f4ea12, type: 2}
+    - target: {fileID: 3015376820018164979, guid: e88f3927b69d9f34a92518d08f321577, type: 3}
       propertyPath: npcAudioSource
       value: 
       objectReference: {fileID: 1064190716}
@@ -4373,30 +4389,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Painting Igniteable
       objectReference: {fileID: 0}
-    - target: {fileID: 3168443958325150907, guid: eecc04c9846f1414494f4c6b9584792e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.086
-      objectReference: {fileID: 0}
-    - target: {fileID: 3168443958325150907, guid: eecc04c9846f1414494f4c6b9584792e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.287
-      objectReference: {fileID: 0}
-    - target: {fileID: 3168443958325150907, guid: eecc04c9846f1414494f4c6b9584792e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.369
-      objectReference: {fileID: 0}
-    - target: {fileID: 3622645153716451630, guid: eecc04c9846f1414494f4c6b9584792e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 4.120881
-      objectReference: {fileID: 0}
-    - target: {fileID: 3622645153716451630, guid: eecc04c9846f1414494f4c6b9584792e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4.120881
-      objectReference: {fileID: 0}
-    - target: {fileID: 3622645153716451630, guid: eecc04c9846f1414494f4c6b9584792e, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 4.120881
-      objectReference: {fileID: 0}
     - target: {fileID: 3622645153716451630, guid: eecc04c9846f1414494f4c6b9584792e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.878
@@ -4436,26 +4428,6 @@ PrefabInstance:
     - target: {fileID: 3622645153716451630, guid: eecc04c9846f1414494f4c6b9584792e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3717046614672511746, guid: eecc04c9846f1414494f4c6b9584792e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3866954588294139413, guid: eecc04c9846f1414494f4c6b9584792e, type: 3}
-      propertyPath: m_Name
-      value: NumberTwo
-      objectReference: {fileID: 0}
-    - target: {fileID: 7219551927347920501, guid: eecc04c9846f1414494f4c6b9584792e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.077
-      objectReference: {fileID: 0}
-    - target: {fileID: 7219551927347920501, guid: eecc04c9846f1414494f4c6b9584792e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.289
-      objectReference: {fileID: 0}
-    - target: {fileID: 7219551927347920501, guid: eecc04c9846f1414494f4c6b9584792e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.364
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

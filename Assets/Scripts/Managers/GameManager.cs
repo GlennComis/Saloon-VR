@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using StudioXRToolkit.Runtime.Scripts.Abstracts;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
@@ -47,7 +49,12 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         audioSource.playOnAwake = false;
         InitNumbers();
     }
-    
+
+    private void Start()
+    {
+        DialogueManager.Instance.SetCurrentConversation(DialogueManager.Instance.puzzle1);
+    }
+
     // Method called by each bell when it is shot
     public void RegisterBellHit(SoundInteractable bell)
     {
@@ -90,6 +97,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
             var currentAudioClip = isCorrect ? bellPuzzleCorrect : bellPuzzleIncorrect;
             audioSource.PlayOneShot(currentAudioClip);
             numberThree.gameObject.SetActive(true);
+            DialogueManager.Instance.SetCurrentConversation(DialogueManager.Instance.escape);
         }
         else
         {
@@ -137,5 +145,12 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         didDrink = true;
         
         numberOne.gameObject.SetActive(true);
+        DialogueManager.Instance.SetCurrentConversation(DialogueManager.Instance.puzzle2);
+    }
+    
+    public void CompletedLightPuzzle()
+    {
+        numberTwo.gameObject.SetActive(true);
+        DialogueManager.Instance.SetCurrentConversation(DialogueManager.Instance.puzzle3);
     }
 }

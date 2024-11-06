@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f2ce293ec4e13f4eb42bdb1caae49a2, type: 3}
-  m_Name: Bartender01
+  m_Name: Bartender00 2
   m_EditorClassIdentifier: 
   npcName: Bartender
-  dialogue: All the ghouls were once mortals who tried to find the numbers, but they
-    all failed...
-  audioClip: {fileID: 8300000, guid: ddc9ac5b6ff88cc4f8dc142f4ca1874d, type: 3}
+  dialogue: "Makes you wonder, doesn\u2019t it?"
+  audioClip: {fileID: 8300000, guid: 1d5e9b2e55569fb40a638072dfdbe173, type: 3}

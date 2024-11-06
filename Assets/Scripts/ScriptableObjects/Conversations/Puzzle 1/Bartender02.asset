@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2ce293ec4e13f4eb42bdb1caae49a2, type: 3}
+  m_Name: Bartender02
+  m_EditorClassIdentifier: 
+  npcName: Bartender
+  dialogue: "Oh, and grab yourself a drink while you\u2019re at it. Never know when
+    you\u2019ll need to quench that thirst.."
+  audioClip: {fileID: 8300000, guid: ddc9ac5b6ff88cc4f8dc142f4ca1874d, type: 3}

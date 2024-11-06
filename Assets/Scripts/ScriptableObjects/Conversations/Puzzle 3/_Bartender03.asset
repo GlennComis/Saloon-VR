@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98d5b2043a9e4987a3fa2455f846e9d9, type: 3}
-  m_Name: _Bartender
+  m_Name: _Bartender03
   m_EditorClassIdentifier: 
   dialogueScriptableObjects:
-  - {fileID: 11400000, guid: d76156a9a1fa9464194ad425fe436117, type: 2}
-  - {fileID: 11400000, guid: 705999128e8204b479bc28327b9b3501, type: 2}
+  - {fileID: 11400000, guid: f069ab1c5f2ab8045b9ab42a58a1caa6, type: 2}
+  - {fileID: 11400000, guid: a448259f2d4c59049a3cfc3a1c228ef8, type: 2}
+  - {fileID: 11400000, guid: c6ef6b3907dd08b40b266a65018c4f6b, type: 2}
+  - {fileID: 11400000, guid: af91c3b334dd75341bb525851335cb51, type: 2}

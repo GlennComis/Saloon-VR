@@ -103,24 +103,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a16d01700ccda2442ae2d5ce0520396e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnIgnitedAll:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3717046614672511746}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   igniteables:
   - {fileID: 6973793795147695027}
   - {fileID: 3390777612897958269}
+  painting: {fileID: 3717046614672511746}
 --- !u!1 &3717046614672511746
 GameObject:
   m_ObjectHideFlags: 0
